@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <body style="background-color: rgb(35, 158, 152)">
+    <div class="container justify-content-center">
+        <div class="row justify-content-center">
+            <div class="col-md-6 justify-content-center" style="margin-top: 190px">
+                <div class="card" id="card">
+                    <div class="card-header">
+                        <p class="card-title" id="headerfill"
+                           style="color: rgb(35, 158, 152); text-align: center;font-size: 0.5in; font-family: Bahnschrift;">
+                            <img src="{% static 'hms_app/img/kawakilogo.png' %}">
+                        </p>
+                        <form class="form-signin" action="{% url 'login_post' %}?next={{ next }}" method="post">
+                            {% csrf_token %}
+                            {% if message %}
+                                <p class="alert alert-danger">{{ message }}</p>
+                            {% endif %}
+                            <div class="form-group col-md-12">
+                                <div>
+                                    <label for="username">Username:</label>
+                                    <input name="username" id="username" type="text">
+                                </div>
+                                <div>
+                                    <label for="password">Password</label>
+                                    <input name="password" id="password" type="password">
+                                </div>
+                            </div>
+                            <div class="checkbox mb-3">
+                                <label>
+                                    <input type="checkbox" value="remember-me"> Remember me
+                                </label>
+                            </div>
+                            <button class="btn btn-lg btn-success btn-block" type="submit">Log In</button>
+                            <div style="padding-left: 130px">Already have an account? <a href="{% url 'register' %}">login.</a>
+                            </div>
+                            <p class="mt-5 mb-3 text-muted text-center">&copy; Kawaki LLC, 2017-2021</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </body>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'manager/dashboard.html' %}
+{% block content %}
+
+
+    <div class="container justify-content-center">
+        <div class="row justify-content-center">
+            <div class="col-md-12 justify-content-center" style="margin-top: 0%">
+                <div class="card" id="card">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th id="registerfill">Room Id</th>
+                            <th id="registerfill">Room Type</th>
+                            <th id="registerfill">Room Status</th>
+                            <th id="registerfill">Room Number</th>
+                        </tr>
+                        </thead>
+                        {% for room in rooms %}
+                            {% if room.room_type|length_is:"5" %}
+
+                                <tbody>
+                                <tr>
+                                    <td id="registerfill">{{ room.room_id }}</td>
+                                    <td id="registerfill">{{ room.room_type }}</td>
+                                    <td id="registerfill">{{ room.room_status }}</td>
+                                    <td id="registerfill">{{ room.room_number }}</td>
+                                </tr>
+                                </tbody>
+                            {% endif %}
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+<ul>
+    <li><h3>USA</h3>
+        <ol>
+            <li>Tigger</li>
+            <li>Tiger</li>
+            <li>Max</li>
+            <li>Smokey</li>
+            <li>Sam</li>
+        </ol>
+    </li>
+    <li><h3>Australia</h3>
+        <ol>
+            <li>Oscar</li>
+            <li>Max</li>
+            <li>Tiger</li>
+            <li>Sam</li>
+            <li>Misty</li>
+        </ol>
+    </li>
+</ul>
+

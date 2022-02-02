@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="col-12">
+    <div class="col-1">
+        <div><a href="{% url 'list_bookings' %}"><button class="button-57" style="width: 100%">List Bookings</button></a></div>
+        <div><a href="{% url 'list_customers' %}"><button class="button-57" style="width: 100%">List Customers</button> </a></div>
+        <div><a href="{% url 'log_out' %}"><button class="button-57" style="width: 100%">Log Out</button> </a></div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,81 @@
+img {
+    image-orientation: initial;
+    width: 100%;
+    height: auto;
+}
+
+body {
+    background-color: white;
+    font-family: Bahnschrift;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav, .navbar {
+    background-color: white;
+    color: #17252a;
+    font-family: Bahnschrift;
+    font-size: 0.3in;
+    width: 100%;
+    padding: 14px 30px;
+    margin-right: auto;
+
+}
+
+color {
+    color: rgb(35, 158, 152);
+    color: black;
+    color: #17252a
+
+}
+
+#img {
+    height: 400px;
+    width: 400px;
+}
+
+#container {
+    background-color: rgb(35, 158, 152);
+    color: black;
+    padding: 1in;
+    font-family: Bahnschrift;
+
+}
+
+footer {
+    background-color: black;
+    color: rgb(35, 158, 152);
+}
+
+card {
+    color: rgb(35, 158, 152);
+    font-family: Bahnschrift;
+}
+
+#headerfill {
+    color: #17252a;
+    text-align: center;
+    font-size: 0.5in;
+    font-family: Bahnschrift;
+
+}
+
+#signin {
+    font-family: Bahnschrift;
+}
+
+#registerfill {
+    color: rgb(35, 158, 152);
+}
+
+#fh {
+    color: white;
+}
+
+#fh2{
+    background-color: black;
+}
+
+#div1{
+    color:rgb(35, 158, 152);
+}

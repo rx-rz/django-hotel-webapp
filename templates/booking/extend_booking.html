@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container justify-content-center">
+        <div class="row justify-content-center">
+            <div class="col-md-6 justify-content-center" style="margin-top: 190px">
+                <div class="card" id="card">
+                    <div class="card-header">
+                        <p class="card-title" id="headerfill"
+                           style="color: rgb(35, 158, 152); text-align: center;font-size: 0.5in; font-family: Bahnschrift;">
+                            EXTEND BOOKING
+                        </p>
+                    </div>
+                    <form action="{% url 'extend_booking' %}" method="post">
+                        {% csrf_token %}
+                        {% if message %}
+                            <p class="alert alert-danger">{{ message }}</p>
+                        {% endif %}
+                        <div class="card-body">
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="booking_reference" class="class form-check-label" ID="registerfill">Booking
+                                        Reference
+                                    </label>
+                                    <input type="number" name="booking_reference">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="check_out" class="class form-check-label" ID="registerfill">Check Out Date
+                                    </label>
+                                    <input type="date" name="check_out">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-outline-dark col-md-12">EXTEND BOOKING
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+161619710205096
+{% endblock %}

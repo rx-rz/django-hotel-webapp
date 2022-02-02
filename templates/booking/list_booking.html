@@ -1,0 +1,49 @@
+{% extends 'manager/dashboard.html' %}
+{% block content %}
+    <div>
+    <div class="text-center align-content-center mx-auto">
+        <a href= {% url 'list_bookings' %}>
+            <button class="button-57">List All Bookings</button>
+        </a>
+        <a href= {% url 'list_active_bookings' %}>
+            <button class="button-57">List Active Bookings</button>
+        </a>
+        <a href= {% url 'list_inactive_bookings' %}>
+            <button class="button-57">List Inactive Bookings</button>
+        </a>
+    </div>
+    <div class="container justify-content-center">
+        <div class="row justify-content-center">
+            <div class="col-md-12 justify-content-center" style="margin-top: 10%">
+                <div class="card" id="card">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th id="registerfill">Booking Id</th>
+                            <th id="registerfill">Room Type</th>
+                            <th id="registerfill">Room Type</th>
+                            <th id="registerfill">Room Number</th>
+                            <th id="registerfill">Check In Date</th>
+                            <th id="registerfill">Check Out Date</th>
+                            <th id="registerfill">Payment Status</th>
+                        </tr>
+                        </thead>
+                        {% for booking in bookings %}
+                            <tbody>
+                            <tr>
+                                <td id="registerfill">{{ booking.booking_reference }}</td>
+                                <td id="registerfill">{{ booking.room_type }}</td>
+                                <td id="registerfill">{{ booking.room_number }}</td>
+                                <td id="registerfill">{{ booking.check_in }}</td>
+                                <td id="registerfill">{{ booking.check_out }}</td>
+                                <td id="registerfill">{{ booking.payment_status }}</td>
+                            </tr>
+                            </tbody>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

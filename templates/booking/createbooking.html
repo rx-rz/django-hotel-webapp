@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container justify-content-center">
+        <div class="row justify-content-center">
+            <div class="col-md-6 justify-content-center" style="margin-top: 190px">
+                <div class="card" id="card">
+                    <div class="card-header">
+                        <p class="card-title" id="headerfill"
+                           style="color: rgb(35, 158, 152); text-align: center;font-size: 0.5in; font-family: Bahnschrift;">
+                            MAKE A BOOKING
+                        </p>
+                    </div>
+                    <form action="{% url 'make_booking' %}" method="post">
+                        {% csrf_token %}
+                        {% if message %}
+                            <p class="alert alert-danger">{{ message }}</p>
+                        {% endif %}
+                        <div class="card-body">
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="room_type" class="class form-check-label" ID="registerfill">Room
+                                        Type</label>
+                                    <select name="room_type" class="col-md-12" for="room_type" id="room_type">Choose
+                                        room type:
+                                        <option value="Basic">Basic</option>
+                                        <option value="Deluxe">Deluxe</option>
+                                        <option value="Mega-Deluxe">Mega-Deluxe</option>
+                                        <option value="Presidential">Presidential</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label class="form-check-label" for="check_in" ID="registerfill">Check In Date
+                                    </label>
+                                    <input name="check_in" id="check_in" class="col-md-12" type="date">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label class="form-check-label" for="check_out" ID="registerfill">Check Out Date
+                                    </label>
+                                    <input name="check_out" id="check_out" class="col-md-12" type="date">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label class="form-check-label" for="phone_number" ID="registerfill">Phone Number
+                                    </label>
+                                    <input name="phone_number" id="phone_number" class="col-md-12" type="number">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label class="form-check-label" for="email" ID="registerfill">Email
+                                    </label>
+                                    <input name="email" id="email" class="col-md-12" type="email">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label class="form-check-label" for="number_of_rooms" ID="registerfill">Number Of
+                                        Rooms
+                                    </label>
+                                    <input name="number_of_rooms" id="number_of_rooms" class="col-md-12" type="number">
+                                </div>
+                                <div>
+                                    <label class="class form-check-label" ID="registerfill" for="payment_type">Payment
+                                        Type</label>
+                                    <select name="payment_type" class="form_group col-md-12"
+                                            id="payment_type">
+                                        <option value="Pay On Arrival">Pay On Arrival</option>
+                                        <option value="Pay Now">Pay Now</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-outline-dark col-md-12">MAKE BOOKING
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

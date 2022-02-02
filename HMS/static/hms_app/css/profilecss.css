@@ -1,0 +1,72 @@
+body {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: rgb(35, 158, 152);
+    background-size: cover;
+    color: #17252a;
+}
+
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #17252a;
+    color: rgb(35, 158, 152);
+    transition: all 0.3s;
+    position: relative;
+}
+
+.yamazaki {
+    background: #17252a;
+    color: rgb(35, 158, 152);
+    font-size: 20px;
+}
+
+.yamazaki:hover {
+    font-size: 30px;
+    background-color: #2B7A78;
+}
+
+
+h2 {
+    font-family: Bahnschrift;
+    color: ghostwhite;
+}
+
+
+#wrapper {
+    padding-left: 0;
+}
+
+#page-wrapper {
+    width: 100%;
+    padding: 0;
+    background-color: #fff;
+}
+
+.wrapper {
+    width: 100%;
+
+}
+
+
+h1 {
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 700;
+    font-size: 30px;
+
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.col-md-12{
+    border-color: rgb(35, 158, 152);
+}
